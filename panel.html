@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="panel.css">
+  </head>
+  <body>
+    <div class="toolbar">
+      <button id="clear-button">Clear</button>
+    </div>
+    <div id="requests-container"></div>
+
+    <template id="request-template">
+      <div class="request-entry">
+        <details>
+          <summary class="request-summary">
+            <span class="status-badge"></span>
+            <span class="method-badge"></span>
+            <span class="url"></span>
+            <span class="duration"></span>
+          </summary>
+          <div class="details-grid">
+            <div class="grid-header">URL:</div>
+            <div class="grid-value full-url"></div>
+
+            <div class="grid-header">Timestamp:</div>
+            <div class="grid-value timestamp"></div>
+            
+            <div class="grid-header">Request Headers:</div>
+            <div class="grid-value"><pre class="headers"></pre></div>
+            
+            <div class="grid-header">Request Body:</div>
+            <div class="grid-value"><pre class="request-body"></pre></div>
+            
+            <div class="grid-header">Response Body:</div>
+            <div class="grid-value"><pre class="response-body"></pre></div>
+            
+            <div class="grid-header">Trace:</div>
+            <div class="grid-value"><pre class="trace"></pre></div>
+          </div>
+        </details>
+      </div>
+    </template>
+
+    <script src="panel.js"></script>
+  </body>
+</html>

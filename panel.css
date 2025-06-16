@@ -1,0 +1,112 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+  
+  .toolbar {
+    background-color: #e0e0e0;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #clear-button {
+    padding: 4px 12px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  #clear-button:hover {
+    background-color: #e5e5e5;
+  }
+  
+  #requests-container {
+    padding: 8px;
+  }
+  
+  .request-entry {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .request-summary {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .request-summary:hover {
+    background-color: #f7f7f7;
+  }
+  
+  .status-badge {
+    padding: 2px 8px; /* Increased horizontal padding slightly for better spacing */
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap; /* The fix: Prevents the text inside from wrapping */
+    flex-shrink: 0;      /* Good practice: Prevents the badge from shrinking */
+  }
+  .status-badge.status-ok { background-color: #28a745; }
+  .status-badge.status-error { background-color: #dc3545; }
+  .status-badge.status-other { background-color: #6c757d; }
+  
+  .method-badge {
+    font-weight: bold;
+    font-family: monospace;
+    color: #333;
+  }
+  
+  .url {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #555;
+  }
+  
+  .duration {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+  }
+  
+  .grid-header {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .grid-value {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .grid-value.full-url {
+    word-break: break-all;
+  }
+  
+  pre {
+    margin: 0;
+    padding: 8px;
+    background-color: #eef;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+  }
